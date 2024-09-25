@@ -1,15 +1,16 @@
-import { IsString, Length } from 'class-validator';
+import { IsDateString, IsString, Length } from 'class-validator';
 
 export class CreateEventDto {
   @IsString()
   @Length(5, 255, { message: 'The name length is wrong' })
   name: string;
 
-  @Length(10, 500, { message: 'The description length is wrong' })
+  @Length(5, 255)
   description: string;
 
+  @IsDateString()
   when?: Date;
 
-  @Length(10, 100, { message: 'The address length is wrong' })
+  @Length(5, 255)
   address: string;
 }

@@ -130,7 +130,8 @@ export class EventsController {
       );
     }
 
-    return await this.EventsService.updateEvent(event, input);
+    await this.EventsService.updateEvent(event, input);
+    return await this.EventsService.findOne(id);
   }
   @Delete(':id')
   @UseGuards(AuthGuardJwt)
