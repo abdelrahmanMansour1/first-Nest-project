@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { Repository } from 'typeorm';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import * as paginator from './../pagination/paginator';
+import * as paginator from '../pagination/paginator';
 import { EventsService } from './events.service';
 import { Event } from './event.entity';
 
